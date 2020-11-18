@@ -1,0 +1,29 @@
+<GridLayout>
+  <BottomNavigation>
+    <TabStrip>
+      <TabStripItem>
+        <Label text="Tab 1"></Label>
+      </TabStripItem>
+      <TabStripItem>
+        <Label text="Tab 2"></Label>
+      </TabStripItem>
+    </TabStrip>
+
+    <TabContentItem>
+      <GridLayout rows="auto,*">
+        <Button text="To page 2" (tap)="toPage2()"></Button>
+      </GridLayout>
+    </TabContentItem>
+
+    <TabContentItem>
+      <GridLayout rows="auto,*">
+        <Button text="To page 2" (tap)="toPage2()"></Button>
+
+        <TabView row="1">
+          <GridLayout *tabItem="{ title: 'tab 1' }"> </GridLayout>
+          <GridLayout *tabItem="{ title: 'tab 2' }"> </GridLayout>
+        </TabView>
+      </GridLayout>
+    </TabContentItem>
+  </BottomNavigation>
+</GridLayout>
